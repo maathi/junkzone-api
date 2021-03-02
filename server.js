@@ -1,6 +1,6 @@
 import dotenv from "dotenv"
 import connectDB from "./config/db.js"
-import colors from "colors"
+// import colors from "colors"
 import itemRouter from "./routes/itemRoute.js"
 import userRouter from "./routes/userRoute.js"
 import express from "express"
