@@ -4,7 +4,7 @@ import connectDB from "./config/db.js"
 import itemRouter from "./routes/itemRoute.js"
 import userRouter from "./routes/userRoute.js"
 import express from "express"
-// import morgan from "morgan"
+import morgan from "morgan"
 import cors from "cors"
 const PORT = process.env.PORT || 5000
 

@@ -43,6 +43,15 @@ async function createItem(req, res) {
   const newItem = await item.save()
   res.status(201).json(newItem)
 }
+async function createItems(req, res) {
+  const items = await Item.insertMany(req.body.items)
+  if (items) {
+    res.json(items)
+  } else {
+    res.status(404)
+    throw new Error("Item not found")
+  }
+}
 
 async function updateItemById(req, res) {
   const item = await Item.findById(req.params.id)
@@ -129,4 +138,5 @@ export {
   updateItemById,
   deleteItemById,
   createItemReview,
+  createItems,
 }
