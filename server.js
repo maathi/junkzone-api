@@ -1,7 +1,8 @@
 import dotenv from "dotenv"
 import connectDB from "./config/db.js"
 import colors from "colors"
-import router from "./routes/items.js"
+import itemRouter from "./routes/itemRoute.js"
+import userRouter from "./routes/userRoute.js"
 import express from "express"
 import morgan from "morgan"
 import cors from "cors"
@@ -19,7 +20,9 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/items", router)
+app.use("/api/items", itemRouter)
+app.use("/api/users", userRouter)
+
 app.listen(
   PORT,
   console.log(
