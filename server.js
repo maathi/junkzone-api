@@ -25,12 +25,5 @@ app.use("/api/users", userRouter)
 
 app.listen(
   PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on Port:${PORT}`.yellow.bold
-  )
+  console.log(`Server running in ${process.env.NODE_ENV} mode on Port:${PORT}`)
 )
-
-// Item.create({ name: "t9shir", image: "fo", price: 23 }, function (err, small) {
-//   if (err) return
-//   console.log(small)
-// })
